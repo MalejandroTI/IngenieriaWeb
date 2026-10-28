@@ -4,6 +4,7 @@
    font-family: 'Anton';
 }
 
+
 header.mainHeader, section.mainSlider {
     background: rgba(254, 229, 0, 0.963);
     font-family: 'Anton';
@@ -154,6 +155,15 @@ body.body-login{
      padding-left: 20px;       /* Empuja el texto 20px a la derecha del borde izquierdo */
     padding-right: 20px;      /* Evita que el texto choque con el borde derecho */
     box-sizing: border-box;   /* Mantiene el tamaño exacto del input sin deformarlo */
+
+
+ transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #00bfff;
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.7);
 }
 
 .input-box input::placeholder{
@@ -200,6 +210,16 @@ body.body-login{
     cursor:pointer;
     font-size: 20px;
     font-weight: 600;
+    transition: background 0.3s ease, 
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.wrapper .btn:hover {
+    background: #333;
+    color: white;
+    transform: scale(1.05);
+
 }
 
 .wrapper .register-link{
@@ -220,4 +240,20 @@ body.body-login{
 .register-link p a:hover{
     text-decoration: underline;
 }
+/* Pantallas de hasta 800px */
+@media (max-width: 800px) {
+    body.body-login {
+        background-image: url('./images/imagen2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
 
+/* Pantallas de hasta 450px */
+@media (max-width: 450px) {
+    body.body-login {
+        background-image: none;
+        background-color: #333;
+    }
+}
